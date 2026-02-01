@@ -55,15 +55,17 @@ export const NotesCard = ({ id, text, title, isPinned }) => {
                 <p>{text}</p>
 
                 <div className="ml-auto">
-                    <button onClick={() => onImpClick(id)}><span className={isNoteImp ? 'material-icons' : 'material-icons-outlined'}>
+                    {!isNoteArchive && !isNoteImp ? <button onClick={() => onImpClick(id)}><span className={isNoteImp ? 'material-icons' : 'material-icons-outlined'}>
                         label_important
-                    </span></button>
-                    <button onClick={() => onArchiveClick(id)} ><span className={isNoteArchive ? 'material-icons' : 'material-icons-outlined'}>
+                    </span></button> : <></>}
+                    {!isNoteArchive && !isNoteImp ? <button onClick={() => onArchiveClick(id)} ><span className={isNoteArchive ? 'material-icons' : 'material-icons-outlined'}>
                         archive
-                    </span></button>
-                    <button onClick={() => onDeleteClick(id)}><span className="material-icons-outlined">
+                    </span></button> : <></>}
+                    {!isNoteArchive && !isNoteImp ? <button onClick={() => onDeleteClick(id)}><span className="material-icons-outlined">
                         delete
-                    </span></button>
+                    </span></button> : <></>}
+
+
                 </div>
             </div>
         </div>
