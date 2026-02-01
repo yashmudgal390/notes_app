@@ -7,14 +7,13 @@ const NotesProvider = ({ children }) => {
         title: '',
         text: '',
         notes: [],
-        pinnedNotes: [],
-        unpinnedNotes: [],
         archive: [],
+        imp:[],
     }
 
-    const [{ title, text, notes, archive }, notesDispatch] = useReducer(notesReducer, initialState);
+    const [{ title, text, notes, archive,imp }, notesDispatch] = useReducer(notesReducer, initialState);
     return (
-        <NotesContext.Provider value={{ title, text, notes, archive, notesDispatch }}>
+        <NotesContext.Provider value={{ title, text, notes, archive ,imp, notesDispatch }}>
             {children}
         </NotesContext.Provider>
     )

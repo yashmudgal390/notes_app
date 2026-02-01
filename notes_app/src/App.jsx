@@ -1,4 +1,5 @@
 import { Home } from './pages/Home'
+import { Important } from './pages/Important'
 
 import './App.css'
 import { Routes,Route } from 'react-router-dom'
@@ -12,6 +13,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/archive' element={<Archive/>}></Route>
+      <Route path='/important' element={<Important/>}></Route>
     </Routes>
     </>
   )

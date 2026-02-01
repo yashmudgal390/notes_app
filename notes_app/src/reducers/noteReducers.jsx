@@ -56,7 +56,19 @@ export const notesReducer = (state, { type, payload }) => {
                 archive: state.archive.filter(({ id }) => id !== payload.id),
 
             }
-
+        
+        case 'IMP':
+            return{
+                ...state,
+                imp:[...state.imp,state.notes.find(({id})=> id === payload.id)],
+                notes:state.notes.filter(({id})=>id !== payload.id)
+            }
+        case 'UNIMP':
+            return{
+                ...state,
+                notes:[...state.notes,state.imp.find(({id})=>id ===payload.id)],
+                imp:state.imp.filter(({id})=> id !==payload.id)
+            }
         case 'DELETE':
             return {
                 ...state,
