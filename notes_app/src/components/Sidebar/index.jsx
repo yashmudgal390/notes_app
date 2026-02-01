@@ -20,11 +20,7 @@ export const Sidebar = () => {
                     label_important
                 </span>
                 <span>Important</span></NavLink>
-            <NavLink className={getStyle} to='/bin'>
-                <span className="material-icons">
-                    delete
-                </span>
-                <span>Bin</span></NavLink>
+            
         </aside>
     )
 }
