@@ -1,4 +1,4 @@
-📝 Notes App (React)
+#📝 Notes App (React)
 
 A modern and minimal Notes Application built completely with React.
 The app allows users to create, pin, archive, mark important, and delete notes with a smooth and intuitive UI.
@@ -131,6 +131,7 @@ Open in browser:
 http://localhost:5173
 
 📸 Screenshots (Optional)
+<img width="1583" height="811" alt="image" src="https://github.com/user-attachments/assets/8560f64a-42a4-49e5-abbd-c22ad26128e7" />
 
 
 
