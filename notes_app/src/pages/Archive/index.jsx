@@ -16,7 +16,7 @@ const {archive}=useNotes();
                     <div className="flex flex-col gap-6">
                         {
                             archive?.length >0 && archive.map(({id,text,title})=>(
-                                <NotesCard key={id} id={id} title={title} text={text}/>
+                                <NotesCard key={id} id={id} title={title} text={text}   />
                             ))
                         }
                     </div>
